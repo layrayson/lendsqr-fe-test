@@ -1,3 +1,6 @@
 export enum Mode {
-    init, loading, loaded, error
+  init,
+  loading,
+  loaded,
+  error,
 }
