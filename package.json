@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,md}'"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@types/react-redux": "^7.1.25",
     "@types/redux": "^3.6.0",
-    "@types/redux-thunk": "^2.1.0"
+    "@types/redux-thunk": "^2.1.0",
+    "prettier": "^2.8.4"
   }
 }
