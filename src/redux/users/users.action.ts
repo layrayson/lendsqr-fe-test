@@ -2,6 +2,8 @@
 import { Dispatch } from 'redux';
 import { UsersActionType, UsersActions } from './users.type';
 import { Mode } from '@/types/mode.type';
+import { UsersService } from '@/services/users.service';
+
 
 export default class UsersAction {
     static findAllUsers =
@@ -12,9 +14,7 @@ export default class UsersAction {
                         type: UsersActionType.FIND_ALL_USERS,
                         mode: Mode.loading,
                     });
-                    const response = await CatalogueService.findAllUsers({
-
-                    });
+                    const response = await UsersService.findAllUsers();
                     dispatch({
                         type: UsersActionType.FIND_ALL_USERS,
                         payload: response,
