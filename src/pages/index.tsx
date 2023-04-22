@@ -10,7 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="font-lg text-red sm:text-yellow md:text-blue lg:text-green xl:text-pink">
+        <div className="font-lg bg-red sm:bg-yellow md:bg-blue lg:bg-green xl:bg-pink w-1 sm:w-2 md:w-3 lg:w-4 xl:w-5">
           Text
         </div>
       </main>

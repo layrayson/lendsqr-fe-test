@@ -8,7 +8,6 @@
       color: $val;
     }
   }
- 
 
   .bg-#{$key} {
     background-color: $val;
@@ -37,14 +36,13 @@
       .text-#{$key}-light-#{$i}00 {
         color: mix(white, $val, $i * 10);
       }
-  
-      
+
       .text-hover-#{$key}-light-#{$i}00 {
         &:hover {
           color: mix(white, $val, $i * 10);
         }
       }
- 
+
       .bg-#{$key}-light-#{$i}00 {
         background-color: mix(white, $val, $i * 10);
       }

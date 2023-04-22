@@ -1,6 +1,28 @@
 @use 'sass:math';
 
 $utilities: (
+  'width': (
+    'prefix': 'w',
+    'values': (
+      '0': 0,
+      '1': $base-width,
+      '2': $base-width * 2,
+      '3': $base-width * 4,
+      '4': $base-width * 6,
+      '5': $base-width * 8,
+    ),
+  ),
+  'height': (
+    'prefix': 'h',
+    'values': (
+      '0': 0,
+      '1': $base-height,
+      '2': $base-height * 2,
+      '3': $base-height * 4,
+      '4': $base-height * 6,
+      '5': $base-height * 8,
+    ),
+  ),
   'padding': (
     'prefix': 'p',
     'values': (
@@ -170,10 +192,24 @@ $utilities: (
       .#{$prefix} {
         #{$property}: $v;
       }
+      @each $screen, $value in $breakpoints {
+        .#{$screen}\:#{$prefix}  {
+          @include breakpoint($value) {
+            #{$property}: $v;
+        }
+        }
+    }
     } @else {
       .#{$prefix}-#{$k} {
         #{$property}: $v;
       }
+      @each $screen, $value in $breakpoints {
+        .#{$screen}\:#{$prefix}-#{$k}  {
+          @include breakpoint($value) {
+            #{$property}: $v;
+        }
+        }
+    }
     }
   }
 }
