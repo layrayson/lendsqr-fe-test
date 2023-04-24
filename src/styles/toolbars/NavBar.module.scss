@@ -1,0 +1,105 @@
+@import '../lendsqrcss/variables';
+@import '../lendsqrcss/breakpoints';
+
+.navMenuContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1075;
+  height: $nav-menu-height;
+  display: flex;
+  align-items: center;
+background: map-get($colors, white );
+box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+  .navWrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+    .logoContainer{
+        width: $side-menu-width;
+        .logo{
+            padding-left: $side-menu-horizontal-padding;
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
+    }
+    .navMenuRight{
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 $nav-menu-horizontal-padding;
+        .searchBar{
+            overflow: hidden;
+            position: relative;
+            display: flex;
+
+            align-items: center;
+            width: 400px;
+            input{
+                border-radius: $base-border-radius*2 0 0 $base-border-radius*2 ;
+                
+                flex: 1 1 auto;
+                width: 344px;
+                margin-bottom: 0;
+                display: block;
+                height: 36px;
+                padding: 1px $base-padding;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.4;
+                
+                border: 1px solid #dfe3e7;
+            }
+            div{
+                margin-left: -1px;
+                button{
+                height: 40px;
+                border-radius:0 $base-border-radius*2  $base-border-radius*2 0;
+                padding: 0 21px;
+                border: 0;
+                background-color: $success;
+
+                }
+            }
+
+        }
+        .navMenuActions{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 33.16px;
+            .navAction{
+
+            }
+            .navAction.docsLink{
+                padding: 0 11.63px;
+                a{
+                    text-decoration: underline;
+                    -webkit-text-fill-color: $primary;
+                }
+            }
+            .navAction.userProfile{
+                display: flex;
+                align-items: center;
+                .userAvatar{
+                    margin-right: 10px;
+                    img{
+                        border-radius: 50%;
+                    }
+                }
+                .userName{
+                    display: flex;
+                    align-items: center;
+                    div{
+
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+    }
+  }
+}
