@@ -1,0 +1,55 @@
+// theme colors
+$blue: #326dee !default;
+$green: #1ac886 !default;
+$red: #d32752 !default;
+$yellow: #f6c31c !default;
+$pink: #df18ff !default;
+$orange: #f55f44 !default;
+$gray: #545f7d !default;
+$primary: #213f7d !default;
+$success: #39cdcc !default;
+
+// color palette
+$colors: (
+  'blue': $blue,
+  'red': $red,
+  'yellow': $yellow,
+  'green': $green,
+  'orange': $orange,
+  'pink': $pink,
+  'gray': $gray,
+  'primary': $primary,
+  'success': $success,
+  'black': black,
+  'white': #ffffff,
+);
+
+//tools
+$nav-menu-height: 6.25rem;
+$side-menu-width: 283px;
+
+// spacing
+$nav-menu-horizontal-padding: 60px;
+$side-menu-horizontal-padding: 30px;
+$side-menu-item-border-thickness: 3px;
+$side-menu-top-padding: 2.4375rem;
+
+$base-padding: 0.75rem;
+$base-width: 0.75rem;
+$base-height: 0.75rem;
+
+$base-margin: 0.75rem;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 4px;
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+
+// font sizes
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;
