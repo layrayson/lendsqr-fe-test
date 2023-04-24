@@ -1,0 +1,23 @@
+@import '../lendsqrcss/variables';
+@import '../lendsqrcss/breakpoints';
+.layoutContainer {
+  width: 100%;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: stretch;
+  min-height: 100vh;
+
+  .layoutPage {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: stretch;
+    padding: 0;
+    flex-basis: 100%;
+    flex-direction: column;
+    width: 0;
+    min-width: 0;
+    max-width: 100%;
+    padding-top: $nav-menu-height + $side-menu-top-padding;
+    padding-left: $side-menu-width;
+  }
+}

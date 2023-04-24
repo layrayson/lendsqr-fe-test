@@ -21,10 +21,19 @@ $colors: (
   'primary': $primary,
   'success': $success,
   'black': black,
-  'white': white,
+  'white': #ffffff,
 );
 
+//tools
+$nav-menu-height: 6.25rem;
+$side-menu-width: 283px;
+
 // spacing
+$nav-menu-horizontal-padding: 60px;
+$side-menu-horizontal-padding: 30px;
+$side-menu-item-border-thickness: 3px;
+$side-menu-top-padding: 2.4375rem;
+
 $base-padding: 0.75rem;
 $base-width: 0.75rem;
 $base-height: 0.75rem;
@@ -33,7 +42,7 @@ $base-margin: 0.75rem;
 
 // borders
 $base-border-thickness: 1px;
-$base-border-radius: 20px;
+$base-border-radius: 4px;
 
 // box-shadow
 $base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
