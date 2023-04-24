@@ -1,6 +1,8 @@
-import DefaultLayout from '@/components/layout/DefaultLayout';
+import DefaultLayout from '@/components/layout/Layout';
 import Head from 'next/head';
 
 export default function Home() {
-  return <DefaultLayout>ss</DefaultLayout>;
+  return <div>
+
+  </div>;
 }
