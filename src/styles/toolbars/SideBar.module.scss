@@ -51,7 +51,7 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    
+
     .menuItemOverlay {
       position: absolute;
       left: 0;
@@ -64,7 +64,7 @@
         border-left: 3px solid $success;
       }
     }
-    
+
     .menuItemInner {
       display: flex;
       align-items: center;
@@ -81,15 +81,12 @@
       }
     }
   }
-  .menuItem.menuItemActive{
+  .menuItem.menuItemActive {
     opacity: 1;
     .menuItemOverlay {
-
-    background-color: rgba($success, 0.1);
-    border-left: 3px solid $success;
-  }
-
-  
+      background-color: rgba($success, 0.1);
+      border-left: 3px solid $success;
+    }
   }
   .menuLabel {
     margin: 30.5px 0 10px 0;

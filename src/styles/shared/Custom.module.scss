@@ -1,0 +1,27 @@
+@import '../lendsqrcss/variables';
+@import '../lendsqrcss/breakpoints';
+
+.pageHeader {
+  margin-bottom: 40px;
+
+  h5 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: $primary;
+  }
+}
+
+.bgLightPink {
+  background-color: rgba($pink, 0.1);
+}
+.bgLightBlue {
+  background-color: rgba($blue, 0.1);
+}
+.bgLightOrange {
+  background-color: rgba($orange, 0.1);
+}
+.bgLightRed {
+  background-color: rgba($red, 0.1);
+}

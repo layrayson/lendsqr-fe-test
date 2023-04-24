@@ -1,0 +1,46 @@
+@import '../lendsqrcss/variables';
+@import '../lendsqrcss/breakpoints';
+
+.pageWrapper {
+  .statsFlex {
+    display: flex;
+    width: 100%;
+    gap: 26px;
+    margin-bottom: 40px;
+    .statsFlexItem {
+      display: flex;
+      width: 25%;
+      flex-direction: column;
+      background-color: map-get($colors, 'white');
+      padding: 20px 30px 30px 30px;
+      border-radius: $base-border-radius;
+      border: 1px solid rgba(33, 63, 125, 0.06);
+      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+      gap: 14px;
+      .statAvatar {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+      .statTitle {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: $gray;
+      }
+      .statValue {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+        color: $primary;
+      }
+    }
+  }
+}

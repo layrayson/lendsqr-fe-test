@@ -12,9 +12,7 @@ const Layout = ({ children }: LayoutProps) => {
 
       <AsideMenu />
       <div className={styles.layoutPage}>
-        <div className={styles.layoutPageInner}>
-
-          {children}</div>
+        <div className={styles.layoutPageInner}>{children}</div>
       </div>
     </div>
   );

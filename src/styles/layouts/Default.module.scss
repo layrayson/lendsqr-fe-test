@@ -19,8 +19,9 @@
     max-width: 100%;
     padding-top: $nav-menu-height + $side-menu-top-padding;
     padding-left: $side-menu-width;
+    background-color: map-get($colors, 'white');
   }
-  .layoutPageInner{
-      padding: 0 60px;
+  .layoutPageInner {
+    padding: 0 60px;
   }
 }
