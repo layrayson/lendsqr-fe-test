@@ -51,6 +51,15 @@
           font-weight: 400;
           line-height: 1.4;
 
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: $gray;
+
+          &::placeholder {
+            color: rgba($gray, 0.7);
+          }
           border: 1px solid #dfe3e7;
         }
         div {

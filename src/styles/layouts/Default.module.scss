@@ -18,6 +18,7 @@
     min-width: 0;
     max-width: 100%;
     padding-top: $nav-menu-height + $side-menu-top-padding;
+    padding-bottom: $side-menu-top-padding;
     padding-left: $side-menu-width;
     background-color: map-get($colors, 'white');
   }

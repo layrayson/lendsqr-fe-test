@@ -16,7 +16,7 @@ const NavBar = () => {
         </div>
         <div className={styles.navMenuRight}>
           <div className={styles.searchBar}>
-            <input type="text" />
+            <input type="text" placeholder="Search for anything" />
             <div>
               <button>
                 <Image

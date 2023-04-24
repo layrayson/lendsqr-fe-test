@@ -43,4 +43,50 @@
       }
     }
   }
+  .tableContainer {
+    padding: 30px;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: $base-border-radius;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      thead {
+        tr {
+          height: 50px;
+
+          th {
+            font-weight: 600;
+            font-size: 12px;
+            // line-height: 14px;
+            text-align: left;
+            align-items: start;
+            // width: calc(100%/6);
+            color: $gray;
+            button {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          height: 61px;
+          border-bottom: solid 1px rgba($primary, 0.1);
+          &:last-child {
+            border-bottom: 0;
+          }
+          td {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: $gray;
+          }
+        }
+      }
+    }
+  }
 }

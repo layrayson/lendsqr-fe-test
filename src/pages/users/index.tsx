@@ -58,6 +58,122 @@ const UsersPage = () => {
           <div className={styles.statValue}>102,453</div>
         </div>
       </div>
+      <div className={styles.tableContainer}>
+        <table>
+          <thead>
+            <tr>
+              <th>
+                ORGANIZATION{' '}
+                <button className={custom.plainBtn}>
+                  <Image
+                    src={'/assets/icons/filter_icon.svg'}
+                    height={10.67}
+                    width={16}
+                    alt="filter"
+                  />
+                </button>
+              </th>
+              <th>
+                USERNAME{' '}
+                <button className={custom.plainBtn}>
+                  <Image
+                    src={'/assets/icons/filter_icon.svg'}
+                    height={10.67}
+                    width={16}
+                    alt="filter"
+                  />
+                </button>
+              </th>
+              <th>
+                EMAIL{' '}
+                <button className={custom.plainBtn}>
+                  <Image
+                    src={'/assets/icons/filter_icon.svg'}
+                    height={10.67}
+                    width={16}
+                    alt="filter"
+                  />
+                </button>
+              </th>
+              <th>
+                PHONE NUMBER{' '}
+                <button className={custom.plainBtn}>
+                  <Image
+                    src={'/assets/icons/filter_icon.svg'}
+                    height={10.67}
+                    width={16}
+                    alt="filter"
+                  />
+                </button>
+              </th>
+              <th>
+                DATE JOINED{' '}
+                <button className={custom.plainBtn}>
+                  <Image
+                    src={'/assets/icons/filter_icon.svg'}
+                    height={10.67}
+                    width={16}
+                    alt="filter"
+                  />
+                </button>
+              </th>
+              <th>
+                STATUS{' '}
+                <button className={custom.plainBtn}>
+                  <Image
+                    src={'/assets/icons/filter_icon.svg'}
+                    height={10.67}
+                    width={16}
+                    alt="filter"
+                  />
+                </button>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lendsqr</td>
+              <td>Adeddeji</td>
+              <td>adedeji@lendsqr.com</td>
+              <td>08097127881</td>
+              <td>May 15, 2020 10:00 AM</td>
+              <td>s</td>
+            </tr>
+            <tr>
+              <td>Lendsqr</td>
+              <td>Adeddeji</td>
+              <td>adedeji@lendsqr.com</td>
+              <td>08097127881</td>
+              <td>May 15, 2020 10:00 AM</td>
+              <td>s</td>
+            </tr>
+            <tr>
+              <td>Lendsqr</td>
+              <td>Adeddeji</td>
+              <td>adedeji@lendsqr.com</td>
+              <td>08097127881</td>
+              <td>May 15, 2020 10:00 AM</td>
+              <td>s</td>
+            </tr>{' '}
+            <tr>
+              <td>Lendsqr</td>
+              <td>Adeddeji</td>
+              <td>adedeji@lendsqr.com</td>
+              <td>08097127881</td>
+              <td>May 15, 2020 10:00 AM</td>
+              <td>s</td>
+            </tr>{' '}
+            <tr>
+              <td>Lendsqr</td>
+              <td>Adeddeji</td>
+              <td>adedeji@lendsqr.com</td>
+              <td>08097127881</td>
+              <td>May 15, 2020 10:00 AM</td>
+              <td>s</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
