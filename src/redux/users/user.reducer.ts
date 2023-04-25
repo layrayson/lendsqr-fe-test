@@ -1,20 +1,19 @@
 import { UserModel } from '@/types/user.type';
 import { UsersActionType, UsersActions } from './users.type';
 import { Mode } from '@/types/mode.type';
+import { PageMeta } from '@/types/pagination.type';
 
 interface State {
     mode: Mode;
     errorMessage: string;
     users: UserModel[];
-    nextPage: number;
-    total: number;
+    pagination: PageMeta;
 }
 const initialState: State = {
     mode: Mode.init,
     users: [],
     errorMessage: '',
-    nextPage: 1,
-    total: 0,
+    pagination: { page: 1, limit: 10 }
 };
 
 export const usersReducer = (
@@ -26,10 +25,9 @@ export const usersReducer = (
 
             return {
                 ...state,
-                users: [...state.users, ...(action.payload ?? [])],
+                users: action.payload?.data ?? state.users,
                 mode: action.mode ?? state.mode,
-                nextPage: state.nextPage,
-                total: state.total,
+                pagination: action.payload?.pagination ?? state.pagination,
                 errorMessage: action.errorMessage ?? state.errorMessage,
             };
 

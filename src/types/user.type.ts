@@ -1,4 +1,9 @@
 export type UserModel = {
-  firstName: string;
-  lastName: string;
+  id: string,
+  userName: string,
+  email: string,
+  phoneNumber: string,
+  orgName: string,
+  createdAt: string,
+
 };

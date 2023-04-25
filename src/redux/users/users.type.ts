@@ -1,4 +1,5 @@
 import { Mode } from '@/types/mode.type';
+import { PageMeta } from '@/types/pagination.type';
 import { UserModel } from '@/types/user.type';
 
 export enum UsersActionType {
@@ -7,7 +8,7 @@ export enum UsersActionType {
 
 export interface FindAllUsers {
   type: UsersActionType.FIND_ALL_USERS;
-  payload?: UserModel[];
+  payload?: { data: UserModel[], pagination: PageMeta };
   mode?: Mode;
   errorMessage?: string;
 }

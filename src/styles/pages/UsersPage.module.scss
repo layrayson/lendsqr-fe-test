@@ -88,13 +88,23 @@
             font-weight: 400;
             font-size: 14px;
             line-height: 16px;
+            word-break: break-all;
             color: $gray;
+            &:nth-last-child(2){
+            word-break: keep-all;
+
+            }
             &:last-child{
                 text-align: right;
+                
             }
           }
         }
       }
     }
+  }
+  .paginationWrapper{
+    display: flex;
+    justify-content: space-between;
   }
 }
