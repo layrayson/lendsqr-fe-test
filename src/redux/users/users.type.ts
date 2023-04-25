@@ -4,12 +4,12 @@ import { UserModel } from '@/types/user.type';
 
 export enum UsersActionType {
   FIND_ALL_USERS = 'FIND_ALL_USERS',
-  SET_PAGE_LIMIT = 'SET_PAGE_LIMIT'
+  SET_PAGE_LIMIT = 'SET_PAGE_LIMIT',
 }
 
 export interface FindAllUsers {
   type: UsersActionType.FIND_ALL_USERS;
-  payload?: { data: UserModel[], pagination: PageMeta };
+  payload?: { data: UserModel[]; pagination: PageMeta };
   mode?: Mode;
   errorMessage?: string;
 }

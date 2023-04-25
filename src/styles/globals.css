@@ -24,40 +24,18 @@ img {
   max-width: 100%;
 }
 
-
 /* LIBRARY OVERRIDES */
 
-.containerClassName{
+.containerClassName {
   display: flex;
   gap: 4px;
 }
-.previousClassName{
-
+.previousClassName {
   border-radius: 4px;
-  color: #213F7D;
-  background-color: rgba(33, 63, 125, 0.1);
-
-}
-.previousLinkClassName{
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 14px;
-  -webkit-text-fill-color: #213F7D;
-  cursor: pointer;
-
-
-}
-.nextClassName{
-
-  border-radius: 4px;
-  color: #213F7D;
+  color: #213f7d;
   background-color: rgba(33, 63, 125, 0.1);
 }
-.nextLinkClassName{
+.previousLinkClassName {
   width: 24px;
   height: 24px;
   display: flex;
@@ -65,24 +43,15 @@ img {
   justify-content: center;
   text-align: center;
   font-size: 14px;
-
-  -webkit-text-fill-color: #213F7D;
+  -webkit-text-fill-color: #213f7d;
   cursor: pointer;
-
-
-
 }
-.activeClassName{
+.nextClassName {
   border-radius: 4px;
-  color: #213F7D;
+  color: #213f7d;
   background-color: rgba(33, 63, 125, 0.1);
-
 }
-.breakClassName{
-  color: #213F7D;
-
-}
-.breakLinkClassName{
+.nextLinkClassName {
   width: 24px;
   height: 24px;
   display: flex;
@@ -91,24 +60,40 @@ img {
   text-align: center;
   font-size: 14px;
 
-  -webkit-text-fill-color: #213F7D;
-}
-.pageClassName{
-  color: #213F7D;
-  
-
-}
-.pageLinkClassName{
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 14px;
-
-  -webkit-text-fill-color: #213F7D;
+  -webkit-text-fill-color: #213f7d;
   cursor: pointer;
+}
+.activeClassName {
+  border-radius: 4px;
+  color: #213f7d;
+  background-color: rgba(33, 63, 125, 0.1);
+}
+.breakClassName {
+  color: #213f7d;
+}
+.breakLinkClassName {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
 
+  -webkit-text-fill-color: #213f7d;
+}
+.pageClassName {
+  color: #213f7d;
+}
+.pageLinkClassName {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
 
+  -webkit-text-fill-color: #213f7d;
+  cursor: pointer;
 }
