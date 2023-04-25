@@ -68,6 +68,11 @@
             button {
               margin-left: 10px;
             }
+            &:last-child{
+                div{
+                    min-width:50px;
+                }
+            }
           }
         }
       }
@@ -84,6 +89,9 @@
             font-size: 14px;
             line-height: 16px;
             color: $gray;
+            &:last-child{
+                text-align: right;
+            }
           }
         }
       }
