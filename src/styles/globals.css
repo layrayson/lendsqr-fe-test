@@ -23,3 +23,92 @@ a {
 img {
   max-width: 100%;
 }
+
+
+/* LIBRARY OVERRIDES */
+
+.containerClassName{
+  display: flex;
+  gap: 4px;
+}
+.previousClassName{
+
+  border-radius: 4px;
+  color: #213F7D;
+  background-color: rgba(33, 63, 125, 0.1);
+
+}
+.previousLinkClassName{
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  -webkit-text-fill-color: #213F7D;
+  cursor: pointer;
+
+
+}
+.nextClassName{
+
+  border-radius: 4px;
+  color: #213F7D;
+  background-color: rgba(33, 63, 125, 0.1);
+}
+.nextLinkClassName{
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+
+  -webkit-text-fill-color: #213F7D;
+  cursor: pointer;
+
+
+
+}
+.activeClassName{
+  border-radius: 4px;
+  color: #213F7D;
+  background-color: rgba(33, 63, 125, 0.1);
+
+}
+.breakClassName{
+  color: #213F7D;
+
+}
+.breakLinkClassName{
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+
+  -webkit-text-fill-color: #213F7D;
+}
+.pageClassName{
+  color: #213F7D;
+  
+
+}
+.pageLinkClassName{
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+
+  -webkit-text-fill-color: #213F7D;
+  cursor: pointer;
+
+
+}

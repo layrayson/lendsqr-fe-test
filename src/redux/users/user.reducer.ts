@@ -30,7 +30,14 @@ export const usersReducer = (
                 pagination: action.payload?.pagination ?? state.pagination,
                 errorMessage: action.errorMessage ?? state.errorMessage,
             };
-
+        case UsersActionType.SET_PAGE_LIMIT:
+            return {
+                ...state,
+                pagination: {
+                    ...state.pagination,
+                    limit: action.payload
+                }
+            }
         default:
             return state;
     }

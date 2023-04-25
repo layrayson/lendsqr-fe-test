@@ -9,9 +9,13 @@ import { useTypedSelector } from '@/hooks/useTypedSelector';
 import UsersAction from '@/redux/users/users.action';
 import { PageMeta } from '@/types/pagination.type';
 import ReactPaginate from 'react-paginate';
+import { useRouter } from 'next/router';
+import { UsersActionType, UsersActions } from '@/redux/users/users.type';
 
 const UsersPage = () => {
     const dispatch = useDispatch<AppDispatch>();
+    const router = useRouter();
+
     const { users, pagination } = useTypedSelector(state => state.usersReducer);
     const mountedRef = useRef(false);
 
@@ -175,26 +179,49 @@ const UsersPage = () => {
                 </table>
             </div>
             <div className={styles.paginationWrapper}>
-                <div>
+                <div className={styles.pageLimitFlex}>
+                    <div className={styles.pageLimitText}>
+                        Showing
+                    </div>
+                    <div className={styles.pageLimitSelect}>
+                        <select name="page-limit-select" id="select-page-limit" defaultValue={100} onChange={(e) => {
+                            dispatch<UsersActions>({ type: UsersActionType.SET_PAGE_LIMIT, payload: Number(e.target.value) })
+                        }}>
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                    <div className={styles.pageLimitText}>
+                        out of 100
+
+                    </div>
 
                 </div>
 
                 <ReactPaginate
                     breakLabel="..."
-                    nextLabel="next >"
+                    nextLabel={<i className='bx bx-chevron-right'></i>}
                     onPageChange={() => {
+                        router.push({ search: `page=${pagination.page}&limit=${pagination.limit}` })
                         findAllUsers({ pagination })
                     }}
                     pageRangeDisplayed={5}
                     pageCount={500 / (pagination.limit)}
-                    previousLabel="< previous"
+                    previousLabel={<i className='bx bx-chevron-left'></i>}
                     renderOnZeroPageCount={null}
-                    breakClassName={styles.paginationBreak}
-                    breakLinkClassName={styles.paginationBreakLink}
-                    containerClassName={styles.containerClassName}
-                    pageClassName={styles.pageClassName}
-                    pageLinkClassName={styles.pageLinkClassName}
-                    activeClassName={styles.activeClassName}
+                    breakClassName={'paginationBreak'}
+                    breakLinkClassName={'paginationBreakLink'}
+                    containerClassName={'containerClassName'}
+                    pageClassName={'pageClassName'}
+                    pageLinkClassName={'pageLinkClassName'}
+                    activeClassName={'activeClassName'}
+                    activeLinkClassName={'activeLinkClassName'}
+                    previousClassName={'previousClassName'}
+                    previousLinkClassName={'previousLinkClassName'}
+                    nextClassName={'nextClassName'}
+                    nextLinkClassName={'nextLinkClassName'}
 
                 />
             </div>
