@@ -10,7 +10,7 @@
   height: $nav-menu-height;
   display: flex;
   align-items: center;
-  background-color: map-get($colors, 'white');
+  background-color: $white;
   box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
   .navWrapper {
     display: flex;

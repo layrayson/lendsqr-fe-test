@@ -8,23 +8,11 @@ $orange: #f55f44 !default;
 $gray: #545f7d !default;
 $primary: #213f7d !default;
 $success: #39cdcc !default;
-$off-white: #e5e5e5 !default;
+$off-white: #fbfbfb !default;
+$white: #ffffff !default;
+$black: black !default;
 
 // color palette
-$colors: (
-  'blue': $blue,
-  'red': $red,
-  'yellow': $yellow,
-  'green': $green,
-  'orange': $orange,
-  'pink': $pink,
-  'gray': $gray,
-  'primary': $primary,
-  'success': $success,
-  'off-white': $off-white,
-  'black': black,
-  'white': #ffffff,
-);
 
 //tools
 $nav-menu-height: 6.25rem;

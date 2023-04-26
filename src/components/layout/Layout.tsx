@@ -1,19 +1,23 @@
 import { ReactNode } from 'react';
-import styles from '../../styles/layouts/Default.module.scss';
-import AsideMenu from '../toolbars/AsideMenu';
-import NavBar from '../toolbars/NavBar';
+
+import Default from './Default';
+import Auth from './Auth';
+import { useRouter } from 'next/router';
 interface LayoutProps {
   children: ReactNode;
 }
 const Layout = ({ children }: LayoutProps) => {
-  return (
-    <div className={styles.layoutContainer}>
-      <NavBar />
+  const router = useRouter();
 
-      <AsideMenu />
-      <div className={styles.layoutPage}>
-        <div className={styles.layoutPageInner}>{children}</div>
-      </div>
+  return (
+    <div>
+      {(() => {
+        if (router.pathname.includes('auth/')) {
+          return <Auth>{children}</Auth>;
+        } else {
+          return <Default>{children}</Default>;
+        }
+      })()}
     </div>
   );
 };
