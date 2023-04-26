@@ -57,7 +57,7 @@ const AsideMenu = () => {
         className={
           styles.menuItem +
           ' ' +
-          (router.pathname == '/users' ? styles.menuItemActive : '')
+          (router.pathname.includes('/users') ? styles.menuItemActive : '')
         }
       >
         <div className={styles.menuItemOverlay}></div>

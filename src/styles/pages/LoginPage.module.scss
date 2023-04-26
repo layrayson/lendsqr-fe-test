@@ -78,15 +78,15 @@
             }
           }
         }
-        .passwordInput{
-            display: flex;
-            align-items: center;
-            position: relative;
-            button{
-                cursor: pointer;
-                position: absolute;
-                right: $base-padding * 4/3;
-            }
+        .passwordInput {
+          display: flex;
+          align-items: center;
+          position: relative;
+          button {
+            cursor: pointer;
+            position: absolute;
+            right: $base-padding * 4/3;
+          }
         }
         .forgotPassword {
           font-style: normal;

@@ -1,0 +1,202 @@
+@import '../lendsqrcss/variables';
+@import '../lendsqrcss/breakpoints';
+.navigation {
+  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: $gray;
+  margin-bottom: 32px;
+  .navigationLink{
+    &:hover{
+  
+      text-decoration: underline;
+    }
+    
+  }
+}
+.pageWrapper {
+  .headerFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    .pageHeader {
+      h5 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        color: $primary;
+      }
+    }
+
+    .headerActions {
+      display: flex;
+      align-items: center;
+
+      gap: 20px;
+      div {
+        button {
+          font-weight: 600;
+          min-height: 40px;
+          min-width: 170px;
+          font-size: 14px;
+          line-height: 16px;
+          /* identical to box height */
+
+          text-align: center;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          background-color: transparent;
+          border-radius: 8px;
+          border: solid 1px;
+          cursor: pointer;
+        }
+        .actionButtonRed {
+          border-color: $red;
+          color: $red;
+        }
+        .actionButtonSuccess {
+          border-color: $success;
+          color: $success;
+        }
+      }
+    }
+  }
+  .userProfileContainer {
+    padding: 30px;
+    background-color: $white;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+
+    margin-bottom: 30px;
+    .userProfileFlex {
+      display: flex;
+      align-items: center;
+
+      .skeletonWidth{
+        width: 100px;
+      }
+      .userProfileAvatar {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: rgba($gray, 0.16);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      .usersTier {
+        padding: 15px 30px;
+        border-left: 1px solid rgba($gray, 0.2);
+        border-right: 1px solid rgba($gray, 0.2);
+
+        .usersTierTitle {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          color: $gray;
+          margin-bottom: 3px;
+        }
+        .usersTierFlex {
+          display: flex;
+          color: $yellow;
+        }
+      }
+      .userNameDiv,
+      .bankDetailsDiv {
+        padding: 15px 30px;
+        .userName,
+        .balanceNumber {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 26px;
+          color: $primary;
+        }
+        .userRef,
+        .bankDets {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: $gray;
+        }
+      }
+    }
+  }
+  .tabViewContainer {
+    padding: 30px;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    background-color: $white;
+    border-radius: 4px;
+    .generalDetail {
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba($gray, 0.2);
+        margin-bottom: 30px;
+        &:nth-child(2){
+            .detailGrid{
+                grid-template-columns: 25% 25% 25% 25%;
+
+            }
+        }
+        &:last-child{
+            border: none;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+
+
+      .detailHeader {
+        margin-bottom: 30px;
+        h5 {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          color: $primary;
+        }
+      }
+      .detailGrid {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        row-gap: 30px;
+ 
+    
+        .detailItem {
+          word-break: break-all;
+
+          .detailTitle {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            /* identical to box height */
+
+            text-transform: uppercase;
+            color: $gray;
+          }
+          .detailContent {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: $gray;
+          }
+          .skeletonWidth{
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -16,6 +16,7 @@ import { UsersActionType, UsersActions } from '@/redux/users/users.type';
 import { Mode } from '@/types/mode.type';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import { getFullName } from '@/types/user.type';
 
 const UsersPage = () => {
   const searchParams = useSearchParams();
@@ -72,7 +73,7 @@ const UsersPage = () => {
   return (
     <div className={styles.pageWrapper}>
       <SkeletonTheme highlightColor="#9999">
-        <div className={custom.pageHeader}>
+        <div className={styles.pageHeader}>
           <h5>Users</h5>
         </div>
         <div className={styles.statsFlex}>
@@ -85,8 +86,10 @@ const UsersPage = () => {
                 width={22}
               />
             </div>
-            <div className={styles.statTitle}>USERS</div>
-            <div className={styles.statValue}>2,453</div>
+            <div className={styles.statContent}>
+              <div className={styles.statTitle}>USERS</div>
+              <div className={styles.statValue}>2,453</div>
+            </div>
           </div>{' '}
           <div className={styles.statsFlexItem}>
             <div className={styles.statAvatar + ' ' + custom.bgLightBlue}>
@@ -97,8 +100,10 @@ const UsersPage = () => {
                 width={22}
               />
             </div>
-            <div className={styles.statTitle}>ACTIVE USERS</div>
-            <div className={styles.statValue}>2,453</div>
+            <div className={styles.statContent}>
+              <div className={styles.statTitle}>ACTIVE USERS</div>
+              <div className={styles.statValue}>2,453</div>
+            </div>
           </div>{' '}
           <div className={styles.statsFlexItem}>
             <div className={styles.statAvatar + ' ' + custom.bgLightOrange}>
@@ -109,8 +114,10 @@ const UsersPage = () => {
                 width={22}
               />
             </div>
-            <div className={styles.statTitle}>USERS WITH LOANS</div>
-            <div className={styles.statValue}>12,453</div>
+            <div className={styles.statContent}>
+              <div className={styles.statTitle}>USERS WITH LOANS</div>
+              <div className={styles.statValue}>12,453</div>
+            </div>
           </div>{' '}
           <div className={styles.statsFlexItem}>
             <div className={styles.statAvatar + ' ' + custom.bgLightRed}>
@@ -121,8 +128,10 @@ const UsersPage = () => {
                 width={22}
               />
             </div>
-            <div className={styles.statTitle}>USERS WITH SAVINGS</div>
-            <div className={styles.statValue}>102,453</div>
+            <div className={styles.statContent}>
+              <div className={styles.statTitle}>USERS WITH SAVINGS</div>
+              <div className={styles.statValue}>102,453</div>
+            </div>
           </div>
         </div>
         <div className={styles.tableContainer}>
@@ -217,9 +226,7 @@ const UsersPage = () => {
                       >
                         <td>{el.orgName}</td>
                         <td>
-                          {el.userName.split('.')[0] +
-                            ' ' +
-                            el.userName.split('.')[1]}
+                          {getFullName(el.userName)}
                         </td>
                         <td>{el.email}</td>
                         <td>{el.phoneNumber}</td>
@@ -278,7 +285,7 @@ const UsersPage = () => {
               });
             }}
             pageRangeDisplayed={5}
-            pageCount={500 / pagination.limit}
+            pageCount={100 / pagination.limit}
             previousLabel={<i className="bx bx-chevron-left"></i>}
             renderOnZeroPageCount={null}
             breakClassName={'paginationBreak'}

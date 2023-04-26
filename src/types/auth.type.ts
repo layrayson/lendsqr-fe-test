@@ -1,3 +1,3 @@
 export type AuthUserModel = {
-    email: string
-}
+  email: string;
+};
