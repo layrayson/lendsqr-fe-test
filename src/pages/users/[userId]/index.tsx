@@ -13,6 +13,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 
 import { getCurrencyString, getFullName } from '@/types/user.type';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const UserDetailsPage = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -32,7 +33,9 @@ const UserDetailsPage = () => {
     , [userId])
   return (
     <>
-
+      <Head>
+        <title>Users | {user?.userName ? getFullName(user?.userName) : ''} </title>
+      </Head>
 
       <div className={styles.navigation}>
         <i className="bx bx-arrow-back"></i> <Link href="/users" className={styles.navigationLink}> Back to Users   </Link>

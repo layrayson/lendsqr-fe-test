@@ -17,6 +17,7 @@ import { Mode } from '@/types/mode.type';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { getFullName } from '@/types/user.type';
+import Head from 'next/head';
 
 const UsersPage = () => {
   const searchParams = useSearchParams();
@@ -71,238 +72,244 @@ const UsersPage = () => {
     mountedRef.current = true;
   }, []);
   return (
-    <div className={styles.pageWrapper}>
-      <SkeletonTheme highlightColor="#9999">
-        <div className={styles.pageHeader}>
-          <h5>Users</h5>
-        </div>
-        <div className={styles.statsFlex}>
-          <div className={styles.statsFlexItem}>
-            <div className={styles.statAvatar + ' ' + custom.bgLightPink}>
-              <Image
-                src={'/assets/icons/users_stat.svg'}
-                alt="users"
-                height={22}
-                width={22}
-              />
-            </div>
-            <div className={styles.statContent}>
-              <div className={styles.statTitle}>USERS</div>
-              <div className={styles.statValue}>2,453</div>
-            </div>
-          </div>{' '}
-          <div className={styles.statsFlexItem}>
-            <div className={styles.statAvatar + ' ' + custom.bgLightBlue}>
-              <Image
-                src={'/assets/icons/active_users_stats.svg'}
-                alt="users"
-                height={22}
-                width={22}
-              />
-            </div>
-            <div className={styles.statContent}>
-              <div className={styles.statTitle}>ACTIVE USERS</div>
-              <div className={styles.statValue}>2,453</div>
-            </div>
-          </div>{' '}
-          <div className={styles.statsFlexItem}>
-            <div className={styles.statAvatar + ' ' + custom.bgLightOrange}>
-              <Image
-                src={'/assets/icons/users_with_loans_stat.svg'}
-                alt="users"
-                height={22}
-                width={22}
-              />
-            </div>
-            <div className={styles.statContent}>
-              <div className={styles.statTitle}>USERS WITH LOANS</div>
-              <div className={styles.statValue}>12,453</div>
-            </div>
-          </div>{' '}
-          <div className={styles.statsFlexItem}>
-            <div className={styles.statAvatar + ' ' + custom.bgLightRed}>
-              <Image
-                src={'/assets/icons/users_with_savings_stat.svg'}
-                alt="users"
-                height={22}
-                width={22}
-              />
-            </div>
-            <div className={styles.statContent}>
-              <div className={styles.statTitle}>USERS WITH SAVINGS</div>
-              <div className={styles.statValue}>102,453</div>
+    <>
+      <Head>
+        <title>Dashboard - Users </title>
+      </Head>
+      <div className={styles.pageWrapper}>
+        <SkeletonTheme highlightColor="#9999">
+          <div className={styles.pageHeader}>
+            <h5>Users</h5>
+          </div>
+          <div className={styles.statsFlex}>
+            <div className={styles.statsFlexItem}>
+              <div className={styles.statAvatar + ' ' + custom.bgLightPink}>
+                <Image
+                  src={'/assets/icons/users_stat.svg'}
+                  alt="users"
+                  height={22}
+                  width={22}
+                />
+              </div>
+              <div className={styles.statContent}>
+                <div className={styles.statTitle}>USERS</div>
+                <div className={styles.statValue}>2,453</div>
+              </div>
+            </div>{' '}
+            <div className={styles.statsFlexItem}>
+              <div className={styles.statAvatar + ' ' + custom.bgLightBlue}>
+                <Image
+                  src={'/assets/icons/active_users_stats.svg'}
+                  alt="users"
+                  height={22}
+                  width={22}
+                />
+              </div>
+              <div className={styles.statContent}>
+                <div className={styles.statTitle}>ACTIVE USERS</div>
+                <div className={styles.statValue}>2,453</div>
+              </div>
+            </div>{' '}
+            <div className={styles.statsFlexItem}>
+              <div className={styles.statAvatar + ' ' + custom.bgLightOrange}>
+                <Image
+                  src={'/assets/icons/users_with_loans_stat.svg'}
+                  alt="users"
+                  height={22}
+                  width={22}
+                />
+              </div>
+              <div className={styles.statContent}>
+                <div className={styles.statTitle}>USERS WITH LOANS</div>
+                <div className={styles.statValue}>12,453</div>
+              </div>
+            </div>{' '}
+            <div className={styles.statsFlexItem}>
+              <div className={styles.statAvatar + ' ' + custom.bgLightRed}>
+                <Image
+                  src={'/assets/icons/users_with_savings_stat.svg'}
+                  alt="users"
+                  height={22}
+                  width={22}
+                />
+              </div>
+              <div className={styles.statContent}>
+                <div className={styles.statTitle}>USERS WITH SAVINGS</div>
+                <div className={styles.statValue}>102,453</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div className={styles.tableContainer}>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  ORGANIZATION{' '}
-                  <button className={custom.plainBtn}>
-                    <Image
-                      src={'/assets/icons/filter_icon.svg'}
-                      height={10.67}
-                      width={16}
-                      alt="filter"
-                    />
-                  </button>
-                </th>
-                <th>
-                  USERNAME{' '}
-                  <button className={custom.plainBtn}>
-                    <Image
-                      src={'/assets/icons/filter_icon.svg'}
-                      height={10.67}
-                      width={16}
-                      alt="filter"
-                    />
-                  </button>
-                </th>
-                <th>
-                  EMAIL{' '}
-                  <button className={custom.plainBtn}>
-                    <Image
-                      src={'/assets/icons/filter_icon.svg'}
-                      height={10.67}
-                      width={16}
-                      alt="filter"
-                    />
-                  </button>
-                </th>
-                <th>
-                  PHONE NUMBER{' '}
-                  <button className={custom.plainBtn}>
-                    <Image
-                      src={'/assets/icons/filter_icon.svg'}
-                      height={10.67}
-                      width={16}
-                      alt="filter"
-                    />
-                  </button>
-                </th>
-                <th>
-                  DATE JOINED{' '}
-                  <button className={custom.plainBtn}>
-                    <Image
-                      src={'/assets/icons/filter_icon.svg'}
-                      height={10.67}
-                      width={16}
-                      alt="filter"
-                    />
-                  </button>
-                </th>
-                <th>
-                  STATUS{' '}
-                  <button className={custom.plainBtn}>
-                    <Image
-                      src={'/assets/icons/filter_icon.svg'}
-                      height={10.67}
-                      width={16}
-                      alt="filter"
-                    />
-                  </button>
-                </th>
-                <th>
-                  <div></div>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {(() => {
-                switch (mode) {
-                  case Mode.init:
-                    return tableLoading();
-                  case Mode.loading:
-                    return tableLoading();
-                  case Mode.loaded:
-                    return users.map((el) => (
-                      <tr
-                        key={`table-row-${el.id}`}
-                        onClick={(e) => {
-                          router.push(`/users/${el.id}`);
-                        }}
-                      >
-                        <td>{el.orgName}</td>
-                        <td>
-                          {getFullName(el.userName)}
-                        </td>
-                        <td>{el.email}</td>
-                        <td>{el.phoneNumber}</td>
-                        <td>{el.createdAt}</td>
-                        <td>
-                          <StatusPillComponent
-                            status={statusList[Math.floor(Math.random() * 4)]}
-                          />
-                        </td>
-                        <td>
-                          <button className={custom.plainBtn}>
-                            <i className="bx bx-dots-vertical-rounded"></i>
-                          </button>
-                        </td>
-                      </tr>
-                    ));
-                }
-              })()}
-            </tbody>
-          </table>
-        </div>
-        <div className={styles.paginationWrapper}>
-          <div className={styles.pageLimitFlex}>
-            <div className={styles.pageLimitText}>Showing</div>
-            <div className={styles.pageLimitSelect}>
-              <select
-                name="page-limit-select"
-                id="select-page-limit"
-                defaultValue={100}
-                onChange={(e) => {
-                  dispatch<UsersActions>({
-                    type: UsersActionType.SET_PAGE_LIMIT,
-                    payload: Number(e.target.value),
-                  });
-                }}
-              >
-                <option value="10">10</option>
-                <option value="25">25</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-              </select>
-            </div>
-            <div className={styles.pageLimitText}>out of 100</div>
+          <div className={styles.tableContainer}>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    ORGANIZATION{' '}
+                    <button className={custom.plainBtn}>
+                      <Image
+                        src={'/assets/icons/filter_icon.svg'}
+                        height={10.67}
+                        width={16}
+                        alt="filter"
+                      />
+                    </button>
+                  </th>
+                  <th>
+                    USERNAME{' '}
+                    <button className={custom.plainBtn}>
+                      <Image
+                        src={'/assets/icons/filter_icon.svg'}
+                        height={10.67}
+                        width={16}
+                        alt="filter"
+                      />
+                    </button>
+                  </th>
+                  <th>
+                    EMAIL{' '}
+                    <button className={custom.plainBtn}>
+                      <Image
+                        src={'/assets/icons/filter_icon.svg'}
+                        height={10.67}
+                        width={16}
+                        alt="filter"
+                      />
+                    </button>
+                  </th>
+                  <th>
+                    PHONE NUMBER{' '}
+                    <button className={custom.plainBtn}>
+                      <Image
+                        src={'/assets/icons/filter_icon.svg'}
+                        height={10.67}
+                        width={16}
+                        alt="filter"
+                      />
+                    </button>
+                  </th>
+                  <th>
+                    DATE JOINED{' '}
+                    <button className={custom.plainBtn}>
+                      <Image
+                        src={'/assets/icons/filter_icon.svg'}
+                        height={10.67}
+                        width={16}
+                        alt="filter"
+                      />
+                    </button>
+                  </th>
+                  <th>
+                    STATUS{' '}
+                    <button className={custom.plainBtn}>
+                      <Image
+                        src={'/assets/icons/filter_icon.svg'}
+                        height={10.67}
+                        width={16}
+                        alt="filter"
+                      />
+                    </button>
+                  </th>
+                  <th>
+                    <div></div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {(() => {
+                  switch (mode) {
+                    case Mode.init:
+                      return tableLoading();
+                    case Mode.loading:
+                      return tableLoading();
+                    case Mode.loaded:
+                      return users.map((el) => (
+                        <tr
+                          key={`table-row-${el.id}`}
+                          onClick={(e) => {
+                            router.push(`/users/${el.id}`);
+                          }}
+                        >
+                          <td>{el.orgName}</td>
+                          <td>
+                            {getFullName(el.userName)}
+                          </td>
+                          <td>{el.email}</td>
+                          <td>{el.phoneNumber}</td>
+                          <td>{el.createdAt}</td>
+                          <td>
+                            <StatusPillComponent
+                              status={statusList[Math.floor(Math.random() * 4)]}
+                            />
+                          </td>
+                          <td>
+                            <button className={custom.plainBtn}>
+                              <i className="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      ));
+                  }
+                })()}
+              </tbody>
+            </table>
           </div>
+          <div className={styles.paginationWrapper}>
+            <div className={styles.pageLimitFlex}>
+              <div className={styles.pageLimitText}>Showing</div>
+              <div className={styles.pageLimitSelect}>
+                <select
+                  name="page-limit-select"
+                  id="select-page-limit"
+                  defaultValue={100}
+                  onChange={(e) => {
+                    dispatch<UsersActions>({
+                      type: UsersActionType.SET_PAGE_LIMIT,
+                      payload: Number(e.target.value),
+                    });
+                  }}
+                >
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+              </div>
+              <div className={styles.pageLimitText}>out of 100</div>
+            </div>
 
-          <ReactPaginate
-            breakLabel="..."
-            nextLabel={<i className="bx bx-chevron-right"></i>}
-            onPageChange={({ selected }) => {
-              console.log(selected);
-              router.push({
-                search: `page=${selected + 1}&limit=${pagination.limit}`,
-              });
-              findAllUsers({
-                pagination: { page: selected + 1, limit: pagination.limit },
-              });
-            }}
-            pageRangeDisplayed={5}
-            pageCount={100 / pagination.limit}
-            previousLabel={<i className="bx bx-chevron-left"></i>}
-            renderOnZeroPageCount={null}
-            breakClassName={'paginationBreak'}
-            breakLinkClassName={'paginationBreakLink'}
-            containerClassName={'containerClassName'}
-            pageClassName={'pageClassName'}
-            pageLinkClassName={'pageLinkClassName'}
-            activeClassName={'activeClassName'}
-            activeLinkClassName={'activeLinkClassName'}
-            previousClassName={'previousClassName'}
-            previousLinkClassName={'previousLinkClassName'}
-            nextClassName={'nextClassName'}
-            nextLinkClassName={'nextLinkClassName'}
-          />
-        </div>
-      </SkeletonTheme>
-    </div>
+            <ReactPaginate
+              breakLabel="..."
+              nextLabel={<i className="bx bx-chevron-right"></i>}
+              onPageChange={({ selected }) => {
+                console.log(selected);
+                router.push({
+                  search: `page=${selected + 1}&limit=${pagination.limit}`,
+                });
+                findAllUsers({
+                  pagination: { page: selected + 1, limit: pagination.limit },
+                });
+              }}
+              pageRangeDisplayed={5}
+              pageCount={100 / pagination.limit}
+              previousLabel={<i className="bx bx-chevron-left"></i>}
+              renderOnZeroPageCount={null}
+              breakClassName={'paginationBreak'}
+              breakLinkClassName={'paginationBreakLink'}
+              containerClassName={'containerClassName'}
+              pageClassName={'pageClassName'}
+              pageLinkClassName={'pageLinkClassName'}
+              activeClassName={'activeClassName'}
+              activeLinkClassName={'activeLinkClassName'}
+              previousClassName={'previousClassName'}
+              previousLinkClassName={'previousLinkClassName'}
+              nextClassName={'nextClassName'}
+              nextLinkClassName={'nextLinkClassName'}
+            />
+          </div>
+        </SkeletonTheme>
+      </div>
+    </>
+
   );
 };
 
