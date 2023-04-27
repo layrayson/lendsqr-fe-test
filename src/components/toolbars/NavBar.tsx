@@ -1,6 +1,18 @@
 import Image from 'next/image';
 import styles from '../../styles/toolbars/NavBar.module.scss';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import { AppDispatch } from '@/redux/store';
+import { useDispatch } from 'react-redux';
+import { AuthActionType, AuthActions } from '@/redux/auth/auth.type';
 const NavBar = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const logout = () => {
+    dispatch<AuthActions>({
+      type: AuthActionType.LOGIN,
+
+    })
+  }
   return (
     <div className={styles.navMenuContainer}>
       <div className={styles.navWrapper}>
@@ -40,25 +52,30 @@ const NavBar = () => {
                 alt="bell"
               />
             </div>
-            <div className={styles.navAction + ' ' + styles.userProfile}>
-              <div className={styles.userAvatar}>
-                <Image
-                  src={'/assets/user_avatar.svg'}
-                  width={48}
-                  height={48}
-                  alt="user"
-                />
-              </div>
-              <div className={styles.userName}>
-                <div>Adedeji</div>
-                <Image
-                  src={'/assets/chevron_down.svg'}
-                  width={7.34}
-                  height={4.15}
-                  alt="user"
-                />
-              </div>
-            </div>
+            <Popup trigger={
+              <button className={styles.navAction + ' ' + styles.userProfile}>
+                <div className={styles.userAvatar}>
+                  <Image
+                    src={'/assets/user_avatar.svg'}
+                    width={48}
+                    height={48}
+                    alt="user"
+                  />
+                </div>
+                <div className={styles.userName}>
+                  <div>Adedeji</div>
+                  <Image
+                    src={'/assets/chevron_down.svg'}
+                    width={7.34}
+                    height={4.15}
+                    alt="user"
+                  />
+                </div>
+              </button>
+            } position="bottom center">
+              <div><button className={styles.logoutButton} onClick={logout}>logout</button></div>
+            </Popup>
+
           </div>
         </div>
       </div>

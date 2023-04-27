@@ -25,6 +25,10 @@ img {
 }
 
 /* LIBRARY OVERRIDES */
+.popup-content {
+  z-index: 1200 !important;
+  width: fit-content !important;
+}
 
 .containerClassName {
   display: flex;
