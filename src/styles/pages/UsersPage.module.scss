@@ -67,8 +67,9 @@
     border-radius: $base-border-radius;
     margin-bottom: 23px;
 
+    overflow-x: scroll;
     table {
-      width: 100%;
+      max-width: 100%;
       border-collapse: collapse;
 
       thead {
@@ -111,12 +112,13 @@
             font-weight: 400;
             font-size: 14px;
             line-height: 16px;
-            word-break: break-all;
+            word-break: normal;
             color: $gray;
             padding-right: 35px;
+            white-space: nowrap;
 
             &:nth-last-child(2) {
-              word-break: keep-all;
+              word-break: normal;
             }
             &:last-child {
               text-align: right;
