@@ -170,7 +170,7 @@
         display: grid;
         grid-template-columns: 20% 20% 20% 20% 20%;
         row-gap: 30px;
- 
+        column-gap: 10px;
     
         .detailItem {
           word-break: break-all;
