@@ -18,6 +18,7 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { getFullName } from '@/types/user.type';
 import Head from 'next/head';
+import { convertDateToString } from '@/helper/convert_date_to_string';
 
 const UsersPage = () => {
   const searchParams = useSearchParams();
@@ -235,7 +236,7 @@ const UsersPage = () => {
                           </td>
                           <td>{el.email}</td>
                           <td>{el.phoneNumber}</td>
-                          <td>{el.createdAt}</td>
+                          <td>{convertDateToString(el.createdAt)}</td>
                           <td>
                             <StatusPillComponent
                               status={statusList[Math.floor(Math.random() * 4)]}
